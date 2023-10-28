@@ -2,12 +2,14 @@ package com.pedro.bookstore.domain;
 
 import java.util.Objects;
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 
+@Entity
 public class Livro {
 	
 	public static final long serialVersionID = 1L;
@@ -35,6 +37,50 @@ public class Livro {
 		this.texto = texto;
 		this.categoria = categoria;
 
+	}
+	
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+	public String getNome_autor() {
+		return nome_autor;
+	}
+
+	public void setNome_autor(String nome_autor) {
+		this.nome_autor = nome_autor;
+	}
+
+	public String getTexto() {
+		return texto;
+	}
+
+	public void setTexto(String texto) {
+		this.texto = texto;
+	}
+
+	public Categoria getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(Categoria categoria) {
+		this.categoria = categoria;
+	}
+
+	public static long getSerialversionid() {
+		return serialVersionID;
 	}
 
 	@Override
